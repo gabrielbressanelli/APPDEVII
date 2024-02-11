@@ -1,0 +1,31 @@
+<!-- tasks/login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/loginstyle.css' %}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-name">TaskBuddy</h1>
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_username">Username:</label>
+            <input type="text" name="username" id="id_username" required>
+
+            <label for="id_password">Password:</label>
+            <input type="password" name="password" id="id_password" required>
+
+          <a class='create' href="{% url 'register' %}">Create an account...<a><a>and never fall behind on your schedule anymore</a>
+
+            <button type="submit">Login</button>
+        </form>
+        {% if form.errors %}
+            <p class="error-message">Invalid username or password</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- tasks/task_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'logout' %}"><button type="submit">Logout</button></a>
+        <h1 class="app-name">TaskBuddy</h1>
+        <h2>Task List</h2>
+        <ul>
+            {% for task in tasks %}
+        <li>
+            <span>{{ task.title }} - {{ task.date }} {{ task.time }}</span>
+            <button class="delete-task" data-task-id="{{ task.id }}">Delete</button>
+        </li>
+    {% endfor %}
+</ul>
+        <a href="{% url 'add_task' %}"><button type="submit">Add Task</button></a>
+    </div>
+    <!-- Add this line at the end of the body section -->
+    <script src="{% static 'tasks/script.js' %}"></script>
+</body>
+</html>
+
