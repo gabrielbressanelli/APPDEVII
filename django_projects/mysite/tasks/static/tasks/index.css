@@ -1,21 +1,29 @@
 body {
-    background-color: #f8f8f8;
-        }
+  background-color: #25d366;
+      }
 
 .container {
-  position: relative;
+position: relative;
 }
 
 .topleft {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  font-size: 18px;
+position: absolute;
+top: 8px;
+left: 16px;
+font-size: 18px;
 }
 
 .bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 18px;
+position: absolute;
+color:#25d366;
+bottom: 8px;
+left: 16px;
+font-size: 18px;
+}
+
+.tittle{
+position: center;
+color: #25d366;
+font-size: 100px;
+padding: 100 100 100 100;
 }
