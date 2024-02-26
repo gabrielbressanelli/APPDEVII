@@ -69,6 +69,9 @@ def delete_task(request, task_id):
 def index_view(request):
     return render(request, 'tasks/index.html')
 
+def calendar_view(request):
+    return render(request,'tasks/calendar.html')
+
 
 
 

@@ -4,33 +4,30 @@
 <head>
     <title>TaskBuddy</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'tasks/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/open.css' %}">
 </head>
 <body>
-    <div class="postion">
-    <div class="topleft">TaskBuddy</div>
+
+    <div class="container">
+        <div class="logo">TaskBuddy</div>
+        <a class='create-button1' href="{% url 'login' %}">Log In</a>
+
+        <h1 class="feature-title">Control your schedule.</h1>
+        <h1 class="feature-title2">Join people for no reason.</h1>
+
+        <h3 class="feature-description">Make boring tasks more enjoyable</h3>
+        <h3 class="feature-description">Control your own schedule the easiest way</h3>
+        <h3 class="feature-description">Share real life</h3>
+
+        <h4 class="app-description">
+            The best and easiest app to control your own schedule,<br>
+            and on top of that stay connected with friends' schedules, <br>
+            so you can meet up for no reason.<br>
+        </h4>
+
+
+
+        <a class='create-button' href="{% url 'register' %}">Create new account</a>
     </div>
-
-    <li></li>
-
-    <h1 class="'tittle">Control your schedule.</h1>
-    <h1 class="tittleb">Join people for no reason.</h1>
-
-    <h3 class="explain">Make boring tasks more enjoyable</h3>
-    <h3 class="explain">Control your own schedule the easiest way</h3>
-    <h3 class="explain">Share real life</h3>
-
-    <div class="postion">
-    <div class="bottomleft">
-        The best and easiest app to control your own schedule,
-        and on top of that stay connected with friends schedule,
-        so you can meet up for no reason.
-    </div>
-    </div>
-
-    <a class='create' href="{% url 'login' %}">Login Now!</a>
-
-    <a class='create' href="{% url 'register' %}">Create an account...<a>
-
 </body>
 </html>

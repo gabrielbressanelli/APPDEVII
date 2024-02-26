@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/calendarstyle.css' %}">
+    <title>TaskBuddy Calendar </title>
+</head>
+<body>
+    <div class="calendar">
+        <div class="header">
+            <button id="prevMonth" onclick="prevMonth()">‹</button>
+            <h2 id="monthYear">Month Year</h2>
+            <button id="nextMonth" onclick="nextMonth()">›</button>
+        </div>
+        <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+        </div>
+        <div class="dates" id="dates"></div>
+    </div>
+    <script src="{% static 'tasks/calendarscript.js' %}"></script>
+
+    <div id="addEventModal" class="event-modal">
+        <h3>Add Event</h3>
+        <label for="eventDate">Date:</label>
+        <input type="date" id="eventDate" required>
+        <label for="eventText">Event:</label>
+        <input type="text" id="eventText" required>
+        <button onclick="addEvent()">Add Event</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</body>
+</html>
