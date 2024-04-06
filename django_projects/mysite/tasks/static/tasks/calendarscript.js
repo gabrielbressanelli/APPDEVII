@@ -13,6 +13,7 @@ const calendar = document.querySelector(".calendar"),
   addEventWrapper = document.querySelector(".add-event-wrapper "),
   addEventCloseBtn = document.querySelector(".close "),
   addEventTitle = document.querySelector(".event-name "),
+  addEventUser = document.querySelector(".event-user "),
   addEventFrom = document.querySelector(".event-time-from "),
   addEventTo = document.querySelector(".event-time-to "),
   addEventSubmit = document.querySelector(".add-event-btn ");
@@ -252,6 +253,10 @@ function updateEvents(date) {
               <i class="fas fa-circle"></i>
               <h3 class="event-title">${event.title}</h3>
             </div>
+            <div class="title">
+              <i class="fas fa-circle"></i>
+              <h3 class="event-title">${event.user}</h3>
+            </div>
             <div class="event-time">
               <span class="event-time">${event.time}</span>
             </div>
@@ -332,9 +337,10 @@ addEventTo.addEventListener("input", (e) => {
 //function to add event to eventsArr
 addEventSubmit.addEventListener("click", () => {
   const eventTitle = addEventTitle.value;
+  const eventUser = addEventUser.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
-  if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
+  if (eventTitle === "" || eventUser === "" || eventTimeFrom === "" || eventTimeTo === "") {
     alert("Please fill all the fields");
     return;
   }
@@ -378,6 +384,7 @@ addEventSubmit.addEventListener("click", () => {
   }
   const newEvent = {
     title: eventTitle,
+    user : eventUser,
     time: timeFrom + " - " + timeTo,
   };
   console.log(newEvent);
@@ -408,6 +415,7 @@ addEventSubmit.addEventListener("click", () => {
   console.log(eventsArr);
   addEventWrapper.classList.remove("active");
   addEventTitle.value = "";
+  addEventUser.value = "";
   addEventFrom.value = "";
   addEventTo.value = "";
   updateEvents(activeDay);
@@ -474,4 +482,3 @@ function convertTime(time) {
   time = timeHour + ":" + timeMin + " " + timeFormat;
   return time;
 }
-

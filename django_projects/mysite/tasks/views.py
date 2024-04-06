@@ -46,7 +46,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('task_list')
+            return redirect('calendar')
     else:
         form = AuthenticationForm()
     return render(request, 'tasks/login.html', {'form': form})
@@ -69,10 +69,6 @@ def delete_task(request, task_id):
 def index_view(request):
     return render(request, 'tasks/index.html')
 
+@login_required()
 def calendar_view(request):
     return render(request,'tasks/calendar.html')
-
-
-
-
-

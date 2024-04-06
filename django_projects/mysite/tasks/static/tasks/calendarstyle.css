@@ -435,11 +435,11 @@
   }
   .add-event-body .add-event-input {
     width: 100%;
-    height: 40px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 2px;
   }
   .add-event-body .add-event-input input {
     width: 100%;
@@ -565,3 +565,13 @@
   .credits a:hover {
     text-decoration: underline;
   }
+
+  .logoutbutton {
+    padding: 10px;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
