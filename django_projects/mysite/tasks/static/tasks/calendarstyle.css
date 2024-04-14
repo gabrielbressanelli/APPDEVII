@@ -575,3 +575,46 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.right form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .right form input[type="text"],
+  .right form button[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .right form input[type="text"] {
+    flex: 1; /* Allow input to take remaining space */
+    border: 1px solid #ccc; /* Add border for better visibility */
+  }
+  
+  .right form button[type="submit"] {
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .right form button[type="submit"]:hover {
+    background-color: #1f9e67; /* Darker shade for hover effect */
+  }
+
+  .city-container {
+    position: absolute;
+    font-size: 10px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  

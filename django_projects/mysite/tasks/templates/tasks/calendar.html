@@ -34,6 +34,9 @@
               <div class="date">december 2015</div>
               <i class="fas fa-angle-right next"></i>
             </div>
+            <div class="city-container">
+                {% include 'tasks/city_weather.html' %}
+            </div> 
             <div class="weekdays">
               <div>Sun</div>
               <div>Mon</div>
@@ -49,13 +52,21 @@
                 <input type="text" placeholder="mm/yyyy" class="date-input" />
                 <button class="goto-btn">Go</button>
               </div>
+              <form class="goto" method="POST">
+                {% csrf_token %}
+                <input type="text" name="city" placeholder="city">
+                <button type="submit">Weather</button> 
+            </form>
               <button class="today-btn">Today</button>
             </div>
           </div>
         </div>
         <div class="right">
           <div class="today-date">
+            <div class="comparison-container">
             <div class="event-day">wed</div>
+
+            </div>
             <div class="event-date">12th december 2022</div>
             <a href="{% url 'logout' %}"><button class="logoutbutton" type="submit">Logout</button></a>
           </div>
@@ -91,11 +102,13 @@
               <button class="add-event-btn">Add Event</button>
 
             </div>
+            
           </div>
         </div>
         <button class="add-event">
           <i class="fas fa-plus"></i>
         </button>
+        
       </div>
 
   
