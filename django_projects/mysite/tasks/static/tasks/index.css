@@ -1,42 +1,43 @@
+/* Base styles */
 body {
-  font-family: 'Arial', sans-serif; /* You can change the font family as needed */
-  background-color: #f4f4f4; /* Light gray background */
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
 }
 
 .container {
   text-align: center;
-  max-width: 600px; /* Adjust as needed */
-  margin: 0 auto; /* Center container horizontally */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #25d366; /* TaskBuddy color */
+  color: #25d366;
 }
 
 .feature-title {
   font-size: 32px;
   font-weight: bold;
-  color: #333; /* Dark gray color */
+  color: #333;
 }
 
 .feature-description {
   font-size: 18px;
-  color: #666; /* Medium gray color */
+  color: #666;
 }
 
 .app-description {
   font-size: 16px;
-  color: #444; /* Slightly darker gray color */
-  margin: 20px 0; /* Adjust margin as needed */
+  color: #444;
+  margin: 20px 0;
 }
 
 .create-button {
@@ -46,11 +47,38 @@ body {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #25d366; /* TaskBuddy color */
+  background-color: #25d366;
   border-radius: 5px;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px;
 }
 
 .create-button:hover {
-  background-color: #128c7e; /* Darker green on hover */
+  background-color: #128c7e;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90%; /* Adjust as needed */
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+
+  .feature-title {
+    font-size: 28px;
+  }
+
+  .feature-description {
+    font-size: 16px;
+  }
+
+  .app-description {
+    font-size: 14px;
+  }
+
+  .create-button {
+    font-size: 16px;
+  }
 }
